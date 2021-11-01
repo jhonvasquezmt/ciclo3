@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservaciones</title>
+    <meta http-equiv="Acces-Control-Allow-Origin" content="*">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src= "js/reservFunciones.js"></script>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+</head>
+<body>
+    <h1>Contenido de Reservaciones</h1>
+    <div >
+        <table>
+            <tbody id = "items">
+                <tr>
+                    <td>Fecha inicio</td>
+                    <td>Fecha devolución</td>
+                    <td>Cliente</td>
+                    <td>Cabaña</td>
+                    <td>Score</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick= "getRes()">OBTENER TABLA</button>
+    </div>
+    
+    <input type="text" id="startDate" placeholder="Fecha Inicio!">
+    <input type="text" id="devolutionDate" placeholder="Fecha Devolucion!">
+    <input type="number" id="cabin" placeholder="Cabaña!">
+
+    
+    <button onclick="postRes()">AGREGAR</button>
+    
+    <button onclick= "putRes()">ACTUALIZAR</button>
+    
+    <a href="index.html">Volver a Inicio</a>
+</body>
+
+</html>

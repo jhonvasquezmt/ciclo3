@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Puntuacion</title>
+    <meta http-equiv="Acces-Control-Allow-Origin" content="*">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src= "js/scorefunciones.js"></script>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+</head>
+<body>
+    <h1>Contenido de Puntuaciones</h1>
+    <div >
+        <table>
+            <tbody id = "items">
+                <tr>
+                    <td>Puntaje</td>
+                    <td>Comentario</td>
+                    <td>Reservacion</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <button onclick= "getSc()">OBTENER TABLA</button>
+    </div>
+    
+    <input type="text" id="scoreValue" placeholder="Puntaje!">
+    <input type="text" id="message" placeholder="Comentario!">
+    <input type="number" id="reservation" placeholder="Reservacion!">
+    
+
+    
+    <button onclick="postSc()">AGREGAR</button>
+    
+    <button onclick= "putSc()">ACTUALIZAR</button>
+    
+    <a href="index.html">Volver a Inicio</a>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clientes</title>
+    <meta http-equiv="Acces-Control-Allow-Origin" content="*">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src= "js/misFunciones.js"></script>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+</head>
+<body>
+    <h1>Contenido de Clientes</h1>
+    <div >
+        <table>
+            <tbody id = "items">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Email</td>
+                    <td>Edad</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick= "getClient()">OBTENER TABLA</button>
+    </div>
+    
+    <input type="text" id="name" placeholder="Nombre!">
+    <input type="text" id="email" placeholder="Correo!">
+    <input type="text" id="password" placeholder="Contraseña!">
+    <input type="number" id="age" placeholder="Edad!">
+    <button onclick="postClient()">AGREGAR</button>
+    
+    <button onclick= "putClientId()">ACTUALIZAR</button>
+    
+    <a href="index.html">Volver a Inicio</a>
+</body>
+
+</html>

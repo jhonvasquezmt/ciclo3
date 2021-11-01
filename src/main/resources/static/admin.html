@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administradores</title>
+    <meta http-equiv="Acces-Control-Allow-Origin" content="*">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src= "js/admfunciones.js"></script>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+</head>
+<body>
+    <h1>Contenido de Administradores</h1>
+    <div >
+        <table>
+            <tbody id = "items">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Email</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <button onclick= "getAdmin()">OBTENER TABLA</button>
+    </div>
+    
+    <input type="text" id="name" placeholder="Nombre!">
+    <input type="text" id="email" placeholder="Correo!">
+    <input type="text" id="password" placeholder="Contraseña!">
+    
+    <button onclick="postAdmin()">AGREGAR</button>
+    
+    <button onclick= "putAdminId()">ACTUALIZAR</button>
+    
+    <a href="index.html">Volver a Inicio</a>
+</body>
+
+</html>

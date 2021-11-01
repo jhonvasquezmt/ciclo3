@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comentarios</title>
+    <meta http-equiv="Acces-Control-Allow-Origin" content="*">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src= "js/messageFunciones.js"></script>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+</head>
+<body>
+    <h1>Contenido de Comentarios</h1>
+    <div >
+        <table>
+            <tbody id = "items">
+                <tr>
+                    <td>Comentario</td>
+                    <td>Cliente</td>
+                    <td>Cabaña</td>
+                    </tr>
+            </tbody>
+        </table>
+        <button onclick= "getMessage()">OBTENER TABLA</button>
+    </div>
+    
+    <input type="text" id="message" placeholder="mensaje!">
+    <input type="number" id="client" placeholder="Cliente!">
+    <input type="number" id="cabin" placeholder="Cabaña!">
+    <button onclick="postMessage()">AGREGAR</button>
+    
+    <button onclick= "putMessageId()">ACTUALIZAR</button>
+    
+    <a href="index.html">Volver a Inicio</a>
+</body>
+
+</html>

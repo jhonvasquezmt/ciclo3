@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cabañas</title>
+    <meta http-equiv="Acces-Control-Allow-Origin" content="*">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src= "js/cabinFunciones.js"></script>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            </style>
+</head>
+<body>
+    <h1>Contenido de Cabañas</h1>
+    <div >
+        <table>
+            <tbody id = "items">
+                <tr>
+                    <td>Marca</td>
+                    <td>No. cuartos</td>
+                    <td>Categoria</td>
+                    <td>Nombre</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick= "getCabin()">OBTENER TABLA</button>
+    </div>
+    
+    <input type="text" id="brand" placeholder="Marca!">
+    <input type="number" id="rooms" placeholder="No. cuartos!">
+    <input type="text" id="category" placeholder="Categoria!">
+    <input type="text" id="name" placeholder="Nombre!">
+    <button onclick="postCabin()">AGREGAR</button>
+    
+    <button onclick= "putCabinId()">ACTUALIZAR</button>
+    
+    <a href="index.html">Volver a Inicio</a>
+</body>
+
+</html>
