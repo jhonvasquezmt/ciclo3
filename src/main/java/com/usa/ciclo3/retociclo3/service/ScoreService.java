@@ -40,4 +40,21 @@ public class ScoreService {
         }
 
     }
+    public Score update(Score c){
+        if(c.getId()!=null){
+            Optional<Score>g=scoreRepository.getScore(c.getId());
+            if(!g.isEmpty()){
+                if(c.getScoreValue()!=null){
+                    g.get().setScoreValue(c.getScoreValue());
+                }
+                if(c.getMessage()!=null){
+                    g.get().setMessage(c.getMessage());
+                }
+                return scoreRepository.save(g.get());
+            }
+        }
+        return c;
+
+    }
+
 }

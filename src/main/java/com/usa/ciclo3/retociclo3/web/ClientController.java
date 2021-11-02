@@ -41,5 +41,13 @@ public class ClientController {
     @GetMapping("/{id}")
     public Optional<Client> getClient(@PathVariable("id") int id){
         return clientService.getClient(id);
-    }    
+    }
+
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Client update(@RequestBody Client c){
+        return clientService.update(c);
+    }
+
+
 }

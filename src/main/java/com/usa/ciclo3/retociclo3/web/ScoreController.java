@@ -36,4 +36,10 @@ public class ScoreController {
     public Optional<Score> getScore(@PathVariable("id") int id){
         return scoreService.getScore(id);
     }
+
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Score update(@RequestBody Score c){
+        return scoreService.update(c);
+    }
 }

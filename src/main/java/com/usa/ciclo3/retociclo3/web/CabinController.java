@@ -41,4 +41,17 @@ public class CabinController {
     public Optional<Cabin> getCabin(@PathVariable("id") int id){
         return cabinService.getCabin(id);
     }
+
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Cabin update(@RequestBody Cabin c){
+        return cabinService.update(c);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean deleteCab(@PathVariable("id") int id){
+        return cabinService.deleteCabin(id);
+    }
+
 }

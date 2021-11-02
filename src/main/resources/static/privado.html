@@ -14,16 +14,25 @@
 </head>
 <body>
 <h1>Seleccione la informacion a la cual desea acceder</h1>
-<div class="container unauthenticated">
-    Para registrarse con GitHub: <a href="/oauth2/authorization/github">Haz click aqui</a>
+
+<div class="container authenticated">
+    Autenticado como: <span id="user"></span>
+
+<pre>
+        <a href="cabin.html">Cabañas</a>
+        <a href="client.html">Clientes</a>
+        <a href="message.html">Comentarios</a>
+        <a href="category.html">Categorias</a>
+        <a href="reservation.html">Reservaciones</a>
+        <a href="admin.html">Administradores</a>
+</pre>
 </div>
 
 </body>
 <script type="text/javascript">
     $.get("/user", function(data) {
         $("#user").html(data.name);
-        $(".unauthenticated").hide()
-        $(".authenticated").show()
+
     });
 </script>
 

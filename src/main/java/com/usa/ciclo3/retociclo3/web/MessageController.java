@@ -41,6 +41,15 @@ public class MessageController {
     @GetMapping("/{id}")
     public Optional<Message> getMessage(@PathVariable("id") int id){
         return messageService.getMessage(id);
-    }    
-    
+    }
+
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Message update(@RequestBody Message c){
+        return messageService.update(c);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean deleteMess(@PathVariable("id") int id){return messageService.deleteMessage(id);}
 }

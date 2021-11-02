@@ -45,5 +45,36 @@ public class CabinService {
         }
 
     }
+    public Cabin update(Cabin c){
+        if(c.getId()!=null){
+            Optional<Cabin>g=cabinRepository.getCabin(c.getId());
+            if(!g.isEmpty()){
+                if(c.getName()!=null){
+                    g.get().setName(c.getName());
+                }
+                if(c.getBrand()!=null){
+                    g.get().setBrand(c.getBrand());
+                }
+                if(c.getRooms()!=null){
+                    g.get().setRooms(c.getRooms());
+                }
+                if(c.getDescription()!=null){
+                    g.get().setDescription(c.getDescription());
+                }
+                return cabinRepository.save(g.get());
+            }
+        }
+        return c;
+
+    }
+    public boolean deleteCabin(int id){
+        Optional<Cabin> a=getCabin(id);
+        if(!a.isEmpty()){
+            cabinRepository.delete(a.get());
+            return true;
+        }
+        return false;
+
+    }
 }
 

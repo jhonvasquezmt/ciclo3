@@ -40,4 +40,30 @@ public class AdminService {
         }
 
     }
+    public Admin update(Admin a){
+        if(a.getId()!=null){
+            Optional<Admin>g=adminRepository.getAdmin(a.getId());
+            if(!g.isEmpty()){
+                if(a.getName()!=null){
+                    g.get().setName(a.getName());
+                }
+                if(a.getPassword()!=null){
+                    g.get().setPassword(a.getPassword());
+                }
+                return adminRepository.save(g.get());
+            }
+        }
+        return a;
+
+    }
+    public boolean deleteAdmin(int id){
+        Optional<Admin> a=getAdmin(id);
+        if(!a.isEmpty()){
+            adminRepository.delete(a.get());
+            return true;
+        }
+        return false;
+
+    }
 }
+
